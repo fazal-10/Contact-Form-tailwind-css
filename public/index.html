@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="dist/styles.css" />
+</head>
+
+<body class="antialiased bg-gray-100 dark:text-gray-100">
+    <!-- toggle button (light/dark mode) -->
+    <div class="flex justify-end items-center mr-56 space-x-2 pt-3">
+        <span class="text-sm text-gray-800 dark:text-gray-400">Light</span>
+        <input type="checkbox" name="" id="toggle" class="hidden">
+        <label for="toggle" class="cursor-pointer">
+            <!-- button look -->
+            <div class="w-9 h-5 flex items-center bg-gray-300 dark:bg-gray-600 rounded-full p-1">
+                <div class="toggle-dot w-4 h-4 rounded-full shadow-md bg-white transform duration-300 ease-in-out"></div>
+            </div>
+        </label>
+        <span class="text-sm text-gray-400 dark:text-gray-800">Dark</span>
+    </div>
+    <div class="flex w-full min-h-screen justify-center items-center">
+        <!-- contact form -->
+        <div
+            class="flex flex-col md:flex-row md:space-x-6 md:space-y-0 space-y-6 bg-pink-400 w-full max-w-4xl text-white p-8 sm:p-12 rounded-xl shadow-lg overflow-hidden dark:bg-gray-700 dark:text-cyan-400">
+            <div class="flex flex-col justify-between space-y-8">
+                <div>
+                    <h1 class="font-bold text-4xl tracking-wide">Contact Us</h1>
+                    <p class="text-sm pt-2 text-pink-200 dark:text-gray-300">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
+                        impedit ad nemo harum.</p>
+                </div>
+                <div class="flex flex-col space-y-6">
+                    <div class="inline-flex space-x-2 items-center">
+                        <ion-icon name="call" class="text-xl"></ion-icon>
+                        <span>+91 9712014441</span>
+                    </div>
+                    <div class="inline-flex space-x-2 items-center">
+                        <ion-icon name="mail" class="text-xl"></ion-icon>
+                        <span>mansuriafsana173@gmail.com</span>
+                    </div>
+                    <div class="inline-flex space-x-2 items-center">
+                        <ion-icon name="location" class="text-xl"></ion-icon>
+                        <span>Hill Park Society,Near vadodara Highway,Godhra</span>
+                    </div>
+                </div>
+                <div class="flex space-x-4 text-lg">
+                    <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+                    <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="w-40 h-40 z-0 absolute rounded-full bg-purple-400 dark:bg-cyan-400 -right-28 -top-28"></div>
+                <div class="w-40 h-40 z-0 absolute rounded-full bg-purple-400 dark:bg-cyan-400 -left-28 -bottom-16"></div>
+                <div class="relative z-10 bg-white p-8 shadow-lg rounded-xl text-gray-600 md:w-96">
+                    <form action="" class="flex flex-col space-y-4">
+                        <div>
+                            <label for="" class="text-sm font-semibold">Your Name</label>
+                            <input type="text" placeholder="Your Name"
+                                class="ring-1 ring-gray-300 px-4 py-2 mt-2 outline-none w-full rounded-md focus:ring-purple-400 dark:focus:ring-cyan-400 focus:ring-2">
+                        </div>
+                        <div>
+                            <label for="" class="text-sm font-semibold">Email Address</label>
+                            <input type="email" placeholder="Email Address"
+                                class="ring-1 ring-gray-300 px-4 py-2 mt-2 outline-none w-full rounded-md focus:ring-purple-400 dark:focus:ring-cyan-400 focus:ring-2">
+                        </div>
+                        <div>
+                            <label for="" class="text-sm font-semibold">Message</label>
+                            <textarea placeholder="Message" rows="4"
+                                class="ring-1 ring-gray-300 px-4 py-2 mt-2 outline-none w-full rounded-md focus:ring-purple-400 dark:focus:ring-cyan-400 focus:ring-2"></textarea>
+                        </div>
+                        <button
+                            class="inline-block self-end bg-purple-500 hover:bg-purple-600 dark:bg-cyan-400 dark:hover:bg-cyan-500 text-white font-bold rounded-lg px-6 py-2 uppercase text-sm">Send
+                            Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script>
+    const checkbox = document.querySelector("#toggle");
+    const html = document.querySelector("html");
+
+    const toggleDarkMode = function () {
+        checkbox.checked
+        ?html.classList.add("dark")
+        :html.classList.remove("dark");
+    }
+
+    toggleDarkMode();
+
+    checkbox.addEventListener("click",toggleDarkMode);
+</script>
+</html>
